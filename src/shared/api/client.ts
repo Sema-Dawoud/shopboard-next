@@ -1,4 +1,6 @@
-const API_BASE_URL = "https://dummyjson.com";
+
+import "server-only";
+import { getApiUrl } from "@/lib/env";
 
 export class ApiError extends Error {
   readonly status: number | undefined;
@@ -21,7 +23,7 @@ export async function fetchJson(
   let response: Response;
 
   try {
-    response = await fetch(`${API_BASE_URL}${path}`, { signal });
+    response = await fetch(`${getApiUrl()}${path}`, { signal });
   } catch (error: unknown) {
     if (signal?.aborted || isAbortError(error)) {
       throw error;

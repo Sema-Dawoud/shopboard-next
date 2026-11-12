@@ -40,14 +40,14 @@ npm start
 
 ## Routes
 
-| Route | Purpose |
-| --- | --- |
-| `/` | ShopBoard Beauty home page |
-| `/products` | Searchable, filterable, sortable product collection |
-| `/products/[id]` | Product details |
-| `/cart` | Shopping bag and quantity management |
-| `/checkout` | Validated mock checkout and order confirmation |
-| `/about` | ShopBoard Beauty story and approach |
+| Route            | Purpose                                             |
+| ---------------- | --------------------------------------------------- |
+| `/`              | ShopBoard Beauty home page                          |
+| `/products`      | Searchable, filterable, sortable product collection |
+| `/products/[id]` | Product details                                     |
+| `/cart`          | Shopping bag and quantity management                |
+| `/checkout`      | Validated mock checkout and order confirmation      |
+| `/about`         | ShopBoard Beauty story and approach                 |
 
 ## Project structure
 

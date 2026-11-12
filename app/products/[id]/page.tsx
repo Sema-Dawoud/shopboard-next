@@ -45,7 +45,10 @@ function ProductDetails({ product }: { product: Product }) {
           <Badge className="w-fit" variant="secondary">
             {product.category}
           </Badge>
-          <CardTitle as="h1" className="font-serif text-3xl font-medium leading-tight sm:text-4xl">
+          <CardTitle
+            as="h1"
+            className="font-serif text-3xl font-medium leading-tight sm:text-4xl"
+          >
             {product.name}
           </CardTitle>
           <CardDescription className="text-base leading-relaxed">
@@ -72,7 +75,9 @@ function ProductDetails({ product }: { product: Product }) {
 function ProductLoadError() {
   return (
     <main className="mx-auto flex min-h-[50vh] max-w-2xl flex-col items-center justify-center px-4 py-16 text-center">
-      <h1 className="font-serif text-3xl font-medium">We couldn’t load this product.</h1>
+      <h1 className="font-serif text-3xl font-medium">
+        We couldn’t load this product.
+      </h1>
       <p className="mt-3 text-muted-foreground">
         The product service is temporarily unavailable. Please try again later,
         or browse the local collection.

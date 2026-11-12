@@ -93,7 +93,9 @@ export async function getProductCatalog(): Promise<ProductCatalog> {
     const response = await fetchJson("/products/category/skin-care");
 
     if (!isApiProductsResponse(response)) {
-      throw new ApiError("The product service returned an unexpected response.");
+      throw new ApiError(
+        "The product service returned an unexpected response.",
+      );
     }
 
     return {

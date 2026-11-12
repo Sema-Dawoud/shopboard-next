@@ -7,7 +7,9 @@ export default function ProductNotFound() {
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
         Product not found
       </p>
-      <h1 className="font-serif text-3xl font-medium">This product isn’t here.</h1>
+      <h1 className="font-serif text-3xl font-medium">
+        This product isn’t here.
+      </h1>
       <p className="mt-3 max-w-md text-muted-foreground">
         It may have moved, or the product link may be incorrect. Browse the
         collection to find something else.

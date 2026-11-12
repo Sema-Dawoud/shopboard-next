@@ -124,11 +124,15 @@ export function ProductCollection({
 
       <section aria-labelledby="product-results-title">
         <div className="mb-5 flex items-center justify-between gap-3">
-          <h2 className="font-serif text-xl font-medium" id="product-results-title">
+          <h2
+            className="font-serif text-xl font-medium"
+            id="product-results-title"
+          >
             Skincare edit
           </h2>
           <Badge variant="outline">
-            {visibleProducts.length} {visibleProducts.length === 1 ? "item" : "items"}
+            {visibleProducts.length}{" "}
+            {visibleProducts.length === 1 ? "item" : "items"}
           </Badge>
         </div>
 

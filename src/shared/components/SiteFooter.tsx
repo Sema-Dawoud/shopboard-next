@@ -23,23 +23,40 @@ export function SiteFooter() {
           <h2 className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand">
             Explore
           </h2>
-          <Link className="hover:text-brand" href="/#categories">Categories</Link>
-          <Link className="hover:text-brand" href="/#favorites">The beauty edit</Link>
-          <Link className="hover:text-brand" href="/about">Our approach</Link>
+          <Link className="hover:text-brand" href="/#categories">
+            Categories
+          </Link>
+          <Link className="hover:text-brand" href="/#favorites">
+            The beauty edit
+          </Link>
+          <Link className="hover:text-brand" href="/about">
+            Our approach
+          </Link>
         </nav>
 
-        <nav aria-label="Your ShopBoard" className="grid content-start gap-2 text-sm">
+        <nav
+          aria-label="Your ShopBoard"
+          className="grid content-start gap-2 text-sm"
+        >
           <h2 className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand">
             Your ShopBoard
           </h2>
-          <Link className="hover:text-brand" href="/cart">Shopping bag</Link>
-          <Link className="hover:text-brand" href="/checkout">Checkout</Link>
-          <Link className="hover:text-brand" href="/products">Find a product</Link>
+          <Link className="hover:text-brand" href="/cart">
+            Shopping bag
+          </Link>
+          <Link className="hover:text-brand" href="/checkout">
+            Checkout
+          </Link>
+          <Link className="hover:text-brand" href="/products">
+            Find a product
+          </Link>
         </nav>
 
         <Card className="gap-3 rounded-3xl border-brand/10 bg-background/70 py-5 shadow-none">
           <CardHeader className="gap-2 px-5">
-            <Badge className="w-fit" variant="secondary">Take a moment</Badge>
+            <Badge className="w-fit" variant="secondary">
+              Take a moment
+            </Badge>
             <CardTitle className="font-serif text-xl font-medium">
               Care for your skin.
             </CardTitle>

@@ -7,7 +7,10 @@ export const checkoutSchema = z.object({
     .string()
     .trim()
     .regex(/^[+]?\d[\d\s()-]{6,19}$/, "Enter a valid phone number.")
-    .refine((phone) => phone.replace(/\D/g, "").length >= 7, "Enter at least 7 digits."),
+    .refine(
+      (phone) => phone.replace(/\D/g, "").length >= 7,
+      "Enter at least 7 digits.",
+    ),
   address: z.string().trim().min(5, "Enter a complete street address."),
   city: z.string().trim().min(2, "Enter your city."),
   postalCode: z.string().trim().min(3, "Enter a valid postal code."),

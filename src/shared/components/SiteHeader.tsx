@@ -92,11 +92,15 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2">
             <Button
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+              aria-label={
+                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
               className="rounded-full"
               onClick={toggleTheme}
               size="icon"
-              title={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+              title={
+                isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
               variant="outline"
             >
               {isDarkMode ? (
@@ -106,7 +110,10 @@ export function SiteHeader() {
               )}
             </Button>
             <Button asChild className="rounded-full" variant="outline">
-              <Link aria-label={`Shopping bag, ${itemCount} items`} href="/cart">
+              <Link
+                aria-label={`Shopping bag, ${itemCount} items`}
+                href="/cart"
+              >
                 <span className="hidden md:inline">Shopping bag</span>
                 <span className="ml-1 grid min-w-5 place-items-center rounded-full bg-brand px-1 text-xs leading-5 text-brand-foreground">
                   {itemCount}
@@ -116,17 +123,34 @@ export function SiteHeader() {
             <Button
               aria-controls="primary-navigation"
               aria-expanded={isMenuOpen}
-              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-label={
+                isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
               className="md:hidden"
               onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
               size="icon"
               variant="outline"
             >
-              <svg aria-hidden="true" className="size-4" fill="none" viewBox="0 0 24 24">
+              <svg
+                aria-hidden="true"
+                className="size-4"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 {isMenuOpen ? (
-                  <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+                  <path
+                    d="m6 6 12 12M18 6 6 18"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeWidth="1.8"
+                  />
                 ) : (
-                  <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeWidth="1.8"
+                  />
                 )}
               </svg>
             </Button>

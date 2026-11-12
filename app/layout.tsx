@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "ShopBoard Beauty",
-  description: "A thoughtful beauty edit for the rituals that make a day yours.",
+  description:
+    "A thoughtful beauty edit for the rituals that make a day yours.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

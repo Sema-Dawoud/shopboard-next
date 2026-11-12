@@ -14,6 +14,7 @@ export function AddToCartButton({
   className?: string;
 }) {
   const addToCart = useCartStore((state) => state.addToCart);
+  const hasHydrated = useCartStore((state) => state.hasHydrated);
   const [message, setMessage] = useState("");
   const available = product.inStock && product.stock > 0;
 
@@ -30,7 +31,7 @@ export function AddToCartButton({
       <Button
         aria-label={`Add ${product.name} to bag`}
         className="rounded-full"
-        disabled={!available}
+        disabled={!available || !hasHydrated}
         onClick={handleAdd}
         size="sm"
         type="button"

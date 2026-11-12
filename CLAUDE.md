@@ -30,3 +30,13 @@ Use these project conventions when changing the storefront. Keep this document a
 - Pages and layouts are Server Components by default. Use a Client Component only when browser APIs, state, effects, or event handlers require it, and keep that client boundary as small as practical.
 - Never read `localStorage`, `window`, or other browser-only APIs during server rendering. Keep data access and product logic in their feature modules and use the single shared API client under `src/shared/api/`.
 - Use `next/link` for internal navigation and Next.js image handling for storefront images. Follow the local Next.js documentation in `node_modules/next/dist/docs/` when an API or convention is unfamiliar.
+
+## Testing Rules
+
+- Never edit, delete, weaken, skip, or rewrite tests just to make a failing test pass.
+- When a test fails, investigate the application code or test environment first.
+- Fix the actual cause of the failure instead of changing the expected result to match incorrect application behavior.
+- Modify tests only when the user explicitly approves a genuine requirement change.
+- Use accessible queries such as `getByRole` and `getByLabelText` in component and E2E tests.
+- Every test name must clearly describe the behavior or outcome that must be true.
+- Keep unit tests focused on business logic, component tests focused on user-visible behavior, and E2E tests focused on complete user flows.

@@ -38,7 +38,10 @@ export function ProductCard({ product }: ProductCardProps) {
           <Badge className="w-fit" variant="secondary">
             {product.category}
           </Badge>
-          <CardTitle as="h3" className="font-serif text-lg font-medium leading-snug">
+          <CardTitle
+            as="h3"
+            className="font-serif text-lg font-medium leading-snug"
+          >
             <Link className="hover:text-brand" href={`/products/${product.id}`}>
               {product.name}
             </Link>
@@ -53,7 +56,12 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="font-semibold text-brand">
               {formatPrice(product.price)}
             </span>
-            <Button asChild className="rounded-full" size="sm" variant="outline">
+            <Button
+              asChild
+              className="rounded-full"
+              size="sm"
+              variant="outline"
+            >
               <Link href={`/products/${product.id}`}>View details</Link>
             </Button>
             <AddToCartButton className="w-full" product={product} />

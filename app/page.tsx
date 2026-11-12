@@ -13,7 +13,10 @@ export default function HomePage() {
   return (
     <Suspense
       fallback={
-        <main aria-busy="true" className="mx-auto min-h-[70vh] max-w-7xl px-4 py-20 sm:px-8">
+        <main
+          aria-busy="true"
+          className="mx-auto min-h-[70vh] max-w-7xl px-4 py-20 sm:px-8"
+        >
           <div className="h-4 w-40 animate-pulse rounded bg-secondary" />
           <div className="mt-5 h-16 max-w-xl animate-pulse rounded-2xl bg-secondary" />
           <div className="mt-10 aspect-[1.5] animate-pulse rounded-3xl bg-secondary" />

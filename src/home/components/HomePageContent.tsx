@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Check, Leaf, PackageCheck, Sparkles } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  Leaf,
+  PackageCheck,
+  Sparkles,
+} from "lucide-react";
 import { Badge } from "@/shared/components/ui/badge";
 import { Button } from "@/shared/components/ui/button";
 import { ProductCard } from "@/products/components/ProductCard";
@@ -31,7 +37,8 @@ export function HomePageContent({ products }: HomePageContentProps) {
               className="max-w-[11ch] font-serif text-5xl font-medium leading-[1.03] tracking-tight text-foreground sm:text-6xl lg:text-7xl"
               id="hero-title"
             >
-              Thoughtful care. Beautiful <em className="text-brand">every day.</em>
+              Thoughtful care. Beautiful{" "}
+              <em className="text-brand">every day.</em>
             </h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
               Considered skincare for your everyday rituals.
@@ -44,7 +51,8 @@ export function HomePageContent({ products }: HomePageContentProps) {
                 className="inline-flex items-center gap-1 text-sm font-medium text-brand underline-offset-4 hover:underline"
                 href="#categories"
               >
-                Explore categories <ArrowUpRight aria-hidden="true" className="size-4" />
+                Explore categories{" "}
+                <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
             </div>
             <div className="mt-10 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-background/75 px-4 py-2 text-sm text-brand">
@@ -63,7 +71,9 @@ export function HomePageContent({ products }: HomePageContentProps) {
               src="/products/skincare-hero.jpg"
             />
             <div className="absolute bottom-4 right-4 rounded-xl border border-white/50 bg-background/90 px-4 py-3 text-[10px] font-semibold leading-relaxed tracking-[0.2em] text-brand shadow-sm">
-              SHOPBOARD<br />BEAUTY
+              SHOPBOARD
+              <br />
+              BEAUTY
             </div>
           </div>
         </div>
@@ -122,7 +132,8 @@ export function HomePageContent({ products }: HomePageContentProps) {
                 className="inline-flex items-center gap-1 text-sm font-medium text-brand underline-offset-4 hover:underline"
                 href="/products"
               >
-                View all products <ArrowUpRight aria-hidden="true" className="size-4" />
+                View all products{" "}
+                <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
             }
           />
@@ -152,7 +163,8 @@ export function HomePageContent({ products }: HomePageContentProps) {
             Make yourself at home.
           </h2>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Discover a considered edit of skincare and small rituals made to feel like your own.
+            Discover a considered edit of skincare and small rituals made to
+            feel like your own.
           </p>
           <Button asChild className="mt-6 w-fit rounded-full" variant="outline">
             <Link href="/about">Our approach</Link>
@@ -168,7 +180,10 @@ export function HomePageContent({ products }: HomePageContentProps) {
           />
         </div>
         <blockquote className="flex min-h-64 flex-col justify-center rounded-b-3xl bg-brand p-7 text-background sm:p-10 md:rounded-r-3xl md:rounded-bl-none">
-          <span aria-hidden="true" className="font-serif text-5xl leading-none text-brand-warm">
+          <span
+            aria-hidden="true"
+            className="font-serif text-5xl leading-none text-brand-warm"
+          >
             “
           </span>
           <p className="font-serif text-2xl leading-snug sm:text-3xl">
@@ -192,7 +207,12 @@ interface SectionHeadingProps {
   action?: React.ReactNode;
 }
 
-function SectionHeading({ eyebrow, title, description, action }: SectionHeadingProps) {
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  action,
+}: SectionHeadingProps) {
   return (
     <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
@@ -253,7 +273,9 @@ export function StoreBenefits() {
         >
           <Icon aria-hidden="true" className="mx-auto mb-2 size-5 text-brand" />
           <h3 className="text-sm font-semibold">{title}</h3>
-          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{copy}</p>
+          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+            {copy}
+          </p>
         </article>
       ))}
     </section>
@@ -267,14 +289,22 @@ export function ValuesStrip() {
       className="mx-auto flex max-w-7xl flex-col gap-4 px-4 pb-14 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pb-20"
     >
       <p className="font-serif text-xl leading-snug sm:text-2xl">
-        Good for you.<br />Good for your everyday.
+        Good for you.
+        <br />
+        Good for your everyday.
       </p>
       <div className="flex flex-wrap gap-2">
-        {["Skincare", "A thoughtful edit", "Made for every day"].map((value) => (
-          <Badge className="rounded-full px-3 py-1" key={value} variant="secondary">
-            <Check aria-hidden="true" /> {value}
-          </Badge>
-        ))}
+        {["Skincare", "A thoughtful edit", "Made for every day"].map(
+          (value) => (
+            <Badge
+              className="rounded-full px-3 py-1"
+              key={value}
+              variant="secondary"
+            >
+              <Check aria-hidden="true" /> {value}
+            </Badge>
+          ),
+        )}
       </div>
     </section>
   );
